@@ -135,13 +135,11 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR + '/debug.log',
+            'filename': BASE_DIR + '/debug.log'
         },
         'console': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-            'stream': sys.stdout,
+            'class': 'logging.StreamHandler'
         }
     },
     'loggers': {
