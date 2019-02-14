@@ -137,11 +137,17 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': BASE_DIR + '/debug.log',
         },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+            'stream': sys.stdout,
+        }
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins', 'file'],
-            'level': 'ERROR',
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
             'propagate': True,
         },
     }
